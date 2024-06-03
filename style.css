@@ -91,7 +91,26 @@ body{
     font-family: "Roboto", sans-serif;
     background-color:var(--body-color);
     overflow-x: hidden;
+    position: relative;
     transition: all 1s;
+}
+/* .preload{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.all{
+    display: none;
+}
+.preload img{
+    width: 700px;
 }
 .overlay{
     position: fixed;
@@ -791,7 +810,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 70px 0;
+    padding: 50px 0;
     position: relative;
 }
 .footer .image::before{
@@ -812,7 +831,7 @@ body{
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .footer .container .allContent p{
     color: #777;
@@ -852,7 +871,7 @@ body{
 }
 @keyframes scrollMobile {
     to {
-        transform: translateX(calc(-50% - 1100px));
+        transform: translateX(calc(-50% - 1450px));
     }
 }
 @keyframes scroll-top{
@@ -867,7 +886,7 @@ body{
 }
 @keyframes scrollMobile2{
     to {
-        transform: translateX(calc(-50% - 2500px));
+        transform: translateX(calc(-50% - 2150px));
     }
 }
 @keyframes scrollMobile3{
@@ -1036,7 +1055,7 @@ body{
         animation-play-state: running;
     }
     .latestWorks .container .box_images img{
-        width: 80px;
+        width: 100px;
     }
     .overlay img{
         width: 300px;
@@ -1118,11 +1137,11 @@ body{
     }
 }
 @media (min-width: 501px) and (max-width: 768px){
-    .container{
-        width: 500px;
-    }
     .main{
         height: auto;
+    }
+    .header{
+        padding: 0 15px;
     }
     .contact .container .inputs input, .contact .container .inputs textarea{
         width: 100%;

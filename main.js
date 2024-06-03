@@ -125,11 +125,6 @@ function addUpArrow(){
                 box.classList.add('animated');
             });
         }
-        if (window.scrollY >= footer.offsetTop - 500){
-            footer.style.zIndex = '1';
-        } else{
-            footer.style.zIndex = '-100';
-        }
     });
     up.addEventListener('click', () => {
         scrollTo({
@@ -151,13 +146,13 @@ function addAnimation(){
     scrollers.forEach((scroller) => {
         scroller.setAttribute('data-animated', true);
 
-        const scrollerInner = document.querySelector('.inner_scroller');
-        const scrollerContent = Array.from(scrollerInner.children);
-        scrollerContent.forEach(item => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute('aria-hidden', true);
-            scrollerInner.appendChild(duplicatedItem);
-        })
+        // const scrollerInner = document.querySelector('.inner_scroller');
+        // const scrollerContent = Array.from(scrollerInner.children);
+        // scrollerContent.forEach(item => {
+            // const duplicatedItem = item.cloneNode(true);
+            // duplicatedItem.setAttribute('aria-hidden', true);
+            // scrollerInner.appendChild(duplicatedItem);
+        // })
     })
 }
 
@@ -222,9 +217,11 @@ function sendEmail(){
     }
 };
 
-
 // when the page loaded
 window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.all').style.display = 'block';
+    document.querySelector('.preload').style.display = 'none';
+
     // save the themColor in localstorage
     let getThemColor = localStorage.getItem('themColor');
     if (getThemColor === 'true') {
