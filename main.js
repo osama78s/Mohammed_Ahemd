@@ -146,13 +146,13 @@ function addAnimation(){
     scrollers.forEach((scroller) => {
         scroller.setAttribute('data-animated', true);
 
-        // const scrollerInner = document.querySelector('.inner_scroller');
-        // const scrollerContent = Array.from(scrollerInner.children);
-        // scrollerContent.forEach(item => {
-            // const duplicatedItem = item.cloneNode(true);
-            // duplicatedItem.setAttribute('aria-hidden', true);
-            // scrollerInner.appendChild(duplicatedItem);
-        // })
+        const scrollerInner = document.querySelector('.inner_scroller');
+        const scrollerContent = Array.from(scrollerInner.children);
+        scrollerContent.forEach(item => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute('aria-hidden', true);
+            scrollerInner.appendChild(duplicatedItem);
+        })
     })
 }
 
