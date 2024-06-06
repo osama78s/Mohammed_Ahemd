@@ -54,6 +54,7 @@ html{
 }
 :root{
     --bg-color: #161616;
+    --show-color: #161616;
     --white-color: #fff;
     --body-color: #0b0b0b;
     --hover-color: #ebdad3;
@@ -71,6 +72,7 @@ html{
 }
 .them_color{
     --bg-color: #f5f5f7;
+    --show-color: #fff;
     --white-color: #000;
     --body-color: #fff;
     --color-links: #4d5d6d;
@@ -585,6 +587,18 @@ body{
 }
 .latestWorks .container .box_images{
     overflow: hidden;
+}
+.latestWorks .container a{
+    text-align: center;
+    display: block;
+    color: var(--bg-color);
+    background-color: var(--i-color);
+    width: fit-content;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
 }
 .latestWorks .container .box_images .inner_scroller{
     display: flex;
@@ -1220,7 +1234,7 @@ body{
     }
     .latestWorks .container .box_images .inner_scroller {
         flex-wrap: nowrap;
-        animation: scrollMobile2 70s linear infinite var(--animation-direction, forwards); /* New animation for mobile */
+        animation: scrollMobile2 0s linear infinite var(--animation-direction, forwards); /* New animation for mobile */
         animation-play-state: running;
     }
     .overlay img{
@@ -1336,3 +1350,10 @@ body{
     }
 }
 /* end media quires */
+.adds{
+    margin-top: 50px;
+}
+.adds .box .inner_scroller img{
+    width: 100px;
+    max-width: 100%;
+}

@@ -5,6 +5,7 @@ let all_logo = document.querySelectorAll('.logo');
 let hLogo = document.querySelector('.hLogo');
 
 // toggle the event between the sun and the moon
+
 function removeAndAddActiveClass() {
     moon.addEventListener('click', () => {
         moon.classList.remove('active');
@@ -217,6 +218,12 @@ function sendEmail(){
     }
 };
 
+document.getElementById('showLink').addEventListener('click', function (e) {
+    console.log('yes')
+    document.querySelector('.adds').classList.add('themColor')
+    localStorage.setItem('clicked', 'true');
+});
+
 // when the page loaded
 window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
@@ -248,6 +255,11 @@ window.addEventListener('DOMContentLoaded', () => {
     if (date){
         let currentDate = new Date().getFullYear();
         date.textContent = currentDate;
+    }
+
+    let clickedItem = localStorage.getItem('clicked');
+    if (clickedItem){
+        console.log('yes')
     }
 })
 
