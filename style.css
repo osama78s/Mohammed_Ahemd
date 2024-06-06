@@ -583,7 +583,7 @@ body{
     margin-top: 100px;
     margin-bottom: 50px;
 }
-.latestWorks .container .box_images[data-animated='true']{
+.latestWorks .container .box_images{
     overflow: hidden;
 }
 .latestWorks .container .box_images .inner_scroller{
@@ -591,9 +591,9 @@ body{
     flex-wrap: wrap;
     gap: 30px;
 }
-.latestWorks .container .box_images[data-animated='true'] .inner_scroller{
+.latestWorks .container .box_images .inner_scroller{
     flex-wrap: nowrap;
-    animation: scroll 80s linear infinite var(--animation-direction, forwards);
+    animation: scroll 70s linear infinite var(--animation-direction, forwards);
     animation-play-state: running;
 }
 .latestWorks .container .box_images[data-direction='right']{
@@ -871,7 +871,7 @@ body{
 }
 @keyframes scrollMobile {
     to {
-        transform: translateX(calc(-50% - 1450px));
+        transform: translateX(calc(-50% - 1350px));
     }
 }
 @keyframes scroll-top{
@@ -886,7 +886,7 @@ body{
 }
 @keyframes scrollMobile2{
     to {
-        transform: translateX(calc(-50% - 2150px));
+        transform: translateX(calc(-50% - 2200px));
     }
 }
 @keyframes scrollMobile3{
@@ -1049,9 +1049,9 @@ body{
         margin-top: 50px;
         margin-bottom: 20px;
     }
-    .latestWorks .container .box_images[data-animated='true'] .inner_scroller {
+    .latestWorks .container .box_images .inner_scroller {
         flex-wrap: nowrap;
-        animation: scrollMobile 80s linear infinite var(--animation-direction, forwards); /* New animation for mobile */
+        animation: scrollMobile 70s linear infinite var(--animation-direction, forwards); /* New animation for mobile */
         animation-play-state: running;
     }
     .latestWorks .container .box_images img{
@@ -1218,9 +1218,9 @@ body{
     .latestWorks .container .box_images img{
         width: 150px;
     }
-    .latestWorks .container .box_images[data-animated='true'] .inner_scroller {
+    .latestWorks .container .box_images .inner_scroller {
         flex-wrap: nowrap;
-        animation: scrollMobile2 80s linear infinite var(--animation-direction, forwards); /* New animation for mobile */
+        animation: scrollMobile2 70s linear infinite var(--animation-direction, forwards); /* New animation for mobile */
         animation-play-state: running;
     }
     .overlay img{
@@ -1296,9 +1296,9 @@ body{
     .all_numbers{
         gap: 20px;
     }
-    .latestWorks .container .box_images[data-animated='true'] .inner_scroller {
+    .latestWorks .container .box_images .inner_scroller {
         flex-wrap: nowrap;
-        animation: scrollMobile3 80s linear infinite var(--animation-direction, forwards); /* New animation for mobile */
+        animation: scrollMobile3 70s linear infinite var(--animation-direction, forwards); /* New animation for mobile */
         animation-play-state: running;
     }
     .latestWorks .container .box_images img{
