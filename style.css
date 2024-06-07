@@ -577,13 +577,17 @@ body{
     text-align: center;
     display: block;
     color: var(--bg-color);
-    background-color: var(--i-color);
+    background-color: var(--up-color);
     width: fit-content;
     margin: auto;
     padding: 10px 20px;
     border-radius: 4px;
     color: #fff;
     font-weight: bold;
+    transition: all 0.3s;
+}
+.latestWorks .container a:hover{
+    background-color: var(--up-hover);
 }
 .latestWorks .container .box_images .inner_scroller{
     display: flex;
