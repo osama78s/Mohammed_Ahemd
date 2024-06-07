@@ -137,25 +137,25 @@ function addUpArrow(){
 addUpArrow();
 
 // scroll the images 
-// const scrollers = document.querySelectorAll('.box_images');
+const scrollers = document.querySelectorAll('.box_images');
 
-// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-//     addAnimation();
-// }
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    addAnimation();
+}
 
-// function addAnimation(){
-//     scrollers.forEach((scroller) => {
-//         scroller.setAttribute('data-animated', true);
+function addAnimation(){
+    scrollers.forEach((scroller) => {
+        scroller.setAttribute('data-animated', true);
 
-//         const scrollerInner = document.querySelector('.inner_scroller');
-//         const scrollerContent = Array.from(scrollerInner.children);
-//         scrollerContent.forEach(item => {
-//             const duplicatedItem = item.cloneNode(true);
-//             duplicatedItem.setAttribute('aria-hidden', true);
-//             scrollerInner.appendChild(duplicatedItem);
-//         })
-//     })
-// }
+        const scrollerInner = document.querySelector('.inner_scroller');
+        const scrollerContent = Array.from(scrollerInner.children);
+        scrollerContent.forEach(item => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute('aria-hidden', true);
+            scrollerInner.appendChild(duplicatedItem);
+        })
+    })
+}
 
 // add the overlay on the body and stop animation 
 let all_innerScroller = document.querySelectorAll('.inner_scroller');
@@ -218,19 +218,8 @@ function sendEmail(){
     }
 };
 
-document.getElementById('showLink').addEventListener('click', function (e) {
-    console.log('yes')
-    document.querySelector('.adds').classList.add('themColor')
-    localStorage.setItem('clicked', 'true');
-});
-
 // when the page loaded
 window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        document.querySelector('.all').style.display = 'block';
-        document.querySelector('.preload').style.display = 'none';
-    }, 2000)
-
     // save the themColor in localstorage
     let getThemColor = localStorage.getItem('themColor');
     if (getThemColor === 'true') {

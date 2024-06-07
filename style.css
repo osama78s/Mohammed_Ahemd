@@ -96,7 +96,7 @@ body{
     position: relative;
     transition: all 1s;
 }
-.preload{
+/* .preload{
     position: absolute;
     left: 0;
     top: 0;
@@ -107,10 +107,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.all{
-    display: none;
-}
+} */
+
 .preload img{
     width: 700px;
 }
