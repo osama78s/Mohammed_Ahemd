@@ -126,6 +126,16 @@ function addUpArrow(){
                 box.classList.add('animated');
             });
         }
+        if (window.scrollY >= footer.offsetTop - 450){
+            footer.style.zIndex = '1';
+        } else if (window.scrollY >= footer.offsetTop - 500){
+            footer.style.zIndex = '1';
+        } else if (window.scrollY >= footer.offsetTop - 520){
+            footer.style.zIndex = '1';
+        }
+        else{
+            footer.style.zIndex = '-100';
+        }
     });
     up.addEventListener('click', () => {
         scrollTo({
