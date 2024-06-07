@@ -834,7 +834,7 @@ body{
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .footer .container .allContent p{
     color: #777;
