@@ -245,10 +245,5 @@ window.addEventListener('DOMContentLoaded', () => {
         let currentDate = new Date().getFullYear();
         date.textContent = currentDate;
     }
-
-    let clickedItem = localStorage.getItem('clicked');
-    if (clickedItem){
-        console.log('yes')
-    }
 })
 
